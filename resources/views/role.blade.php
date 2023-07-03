@@ -13,10 +13,7 @@
           <tr>
               <td>{{$role->title}}</td>
               @foreach ($role->users as $user)
-                @php
-                  $data = \App\Models\User::find($user->id);
-                @endphp
-                <td>{{$data->name}}</td>
+                <td>{{$user->name}}</td>
               @endforeach
   
           </tr>
